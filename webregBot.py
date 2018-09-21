@@ -11,9 +11,8 @@ PASSWORD_STR = 'PASSWORD'
 COURSES = ['COURSE 1', 'COURSE 2', 'COURSE 3', 'COURSE 4']
 SECTION_IDS = ['SECTION ID 1', 'SECTION ID 2', 'SECTION ID 3', 'SECTION ID 4']
 
-# make sure that you have the phantomjs/chromedriver executable in PATH (open .bash_profile)
-# browser = webdriver.Chrome()
-browser = webdriver.PhantomJS()
+browser = webdriver.Chrome('./driver/chromedriver')
+# browser = webdriver.PhantomJS('./driver/phantomjs')
 browser.get(('https://act.ucsd.edu/webreg2'))
 
 # enter username
