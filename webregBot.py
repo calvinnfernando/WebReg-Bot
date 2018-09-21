@@ -5,10 +5,11 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # CHANGE THE VALUE OF THESE VARIABLES ACCORDINGLY :)
-USERNAME_STR = 'A14765257'
-PASSWORD_STR = 'Naruto69'
-COURSES = ['CSE 101', 'CSE 110', 'CSE 150', 'CSE 158', 'CSE 95']
-SECTION_IDS = ['947830', '947857', '947893', '947900', '947818']
+# Note that the number of elements inside the array COURSES and SECTION_IDS must be the same!
+USERNAME_STR = 'PID'
+PASSWORD_STR = 'PASSWORD'
+COURSES = ['COURSE 1', 'COURSE 2', 'COURSE 3', 'COURSE 4']
+SECTION_IDS = ['SECTION ID 1', 'SECTION ID 2', 'SECTION ID 3', 'SECTION ID 4']
 
 # make sure that you have the phantomjs/chromedriver executable in PATH (open .bash_profile)
 # browser = webdriver.Chrome()
