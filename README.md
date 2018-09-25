@@ -6,4 +6,4 @@ You need to have Selenium installed. To install, type the following on the termi
 
 Open webregBot.py and change the value of the variables on line 9-12 accordingly, then decide which browser that you want to use on line 14-15.
 
-To run, type the following:   `./bgBash.sh [date] [time]`
+To run, type the following:   `./bgBash.sh [date: MM-DD-YYYY] [time: HH:MM]`
