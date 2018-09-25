@@ -2,7 +2,7 @@
 
 :fire: **Use at your own risk!** :fire:
 
-A bot to automate enrolling process in UCSD WebReg on TritonLink.
+A bot to automate enrolling process in UCSD WebReg on [TritonLink](https://act.ucsd.edu/webreg2).
 
 ## Prerequisites
 
