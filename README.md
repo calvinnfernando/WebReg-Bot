@@ -1,6 +1,6 @@
 # WebReg Bot
 
-**Use at your own risk!**
+:fire: **Use at your own risk!** :fire:
 
 A bot to automate enrolling process in UCSD WebReg on TritonLink.
 
