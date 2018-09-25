@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="Usage: $0 [date] [time]"
+USAGE="Usage: $0 [date: MM-DD-YYYY] [time: HH:MM]"
 
 if [ "$#" -ne 2 ]; then
 	echo "$USAGE"
@@ -13,10 +13,10 @@ currTime=$(date +%H:%M)
 while true; do
 	if [[ "$currDate" > "$1" ]]; then
 		break
-	fi
-
-	if [[ "$currTime" > "$2" ]] || [[ "$currTime" == "$2" ]]; then
-		break
+	elif [[ "$currDate" == "$1" ]]; then
+		if [[ "$currTime" > "$2" ]] || [[ "$currTime" == "$2" ]]; then
+			break
+		fi
 	fi
 
 	currDate=$(date +%m-%d-%Y)
