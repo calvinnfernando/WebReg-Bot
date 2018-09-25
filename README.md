@@ -1,7 +1,5 @@
 # UCSD-WebReg-Bot
 
-**Note: This is the beta version! It works but still working on the user-interactive part.**
-
 A bot to automate enrolling process in UCSD WebReg on TritonLink.
 
 You need to have Selenium installed. To install, type the following on the terminal:    `pip install selenium`
