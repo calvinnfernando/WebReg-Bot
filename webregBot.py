@@ -1,18 +1,27 @@
+import config
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# CHANGE THE VALUE OF THESE VARIABLES ACCORDINGLY :)
-# Note that the number of elements inside the array COURSES and SECTION_IDS must be the same!
-USERNAME_STR = 'PID'
-PASSWORD_STR = 'PASSWORD'
-COURSES = ['COURSE 1', 'COURSE 2', 'COURSE 3', 'COURSE 4']
-SECTION_IDS = ['SECTION ID 1', 'SECTION ID 2', 'SECTION ID 3', 'SECTION ID 4']
+# get user configuration
+USERNAME_STR = config.CONFIG['USERNAME_STR']
+PASSWORD_STR = config.CONFIG['PASSWORD_STR']
+COURSES = config.CONFIG['COURSES']
+SECTION_IDS = config.CONFIG['SECTION_IDS']
+BROWSER = config.CONFIG['BROWSER']
 
-browser = webdriver.Chrome('./driver/chromedriver')
-# browser = webdriver.PhantomJS('./driver/phantomjs')
+if BROWSER == 'CHROME':
+	browser = webdriver.Chrome('./driver/chromedriver')
+elif BROWSER == 'PHANTOM':
+	browser = webdriver.PhantomJS('./driver/phantomjs')
+else:
+	print 'Browser is not supported :('
+	'''
+	TODO
+	write an exception if browser is not chrome or phantom 
+	'''
 browser.get(('https://act.ucsd.edu/webreg2'))
 
 # enter username
