@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+# get user configuration
 USERNAME_STR = config.CONFIG['USERNAME_STR']
 PASSWORD_STR = config.CONFIG['PASSWORD_STR']
 COURSES = config.CONFIG['COURSES']
@@ -17,7 +17,10 @@ elif config.CONFIG['BROWSER'] == 'PHANTOM':
 	browser = webdriver.PhantomJS('./driver/phantomjs')
 else:
 	print 'Browser is not supported :('
-	
+	'''
+	TODO
+	write an exception if browser is not chrome or phantom 
+	'''
 browser.get(('https://act.ucsd.edu/webreg2'))
 
 # enter username
