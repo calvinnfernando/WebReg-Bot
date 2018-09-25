@@ -10,10 +10,11 @@ USERNAME_STR = config.CONFIG['USERNAME_STR']
 PASSWORD_STR = config.CONFIG['PASSWORD_STR']
 COURSES = config.CONFIG['COURSES']
 SECTION_IDS = config.CONFIG['SECTION_IDS']
+BROWSER = config.CONFIG['BROWSER']
 
-if config.CONFIG['BROWSER'] == 'CHROME':
+if BROWSER == 'CHROME':
 	browser = webdriver.Chrome('./driver/chromedriver')
-elif config.CONFIG['BROWSER'] == 'PHANTOM':
+elif BROWSER == 'PHANTOM':
 	browser = webdriver.PhantomJS('./driver/phantomjs')
 else:
 	print 'Browser is not supported :('
