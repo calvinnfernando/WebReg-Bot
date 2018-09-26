@@ -20,7 +20,19 @@ pip install selenium
 
 ## How to use
 
-Open webregBot.py and change the value of the variables on line 9-12 accordingly, then decide which browser that you want to use on line 14-15.
+Open `config.py` and fill up your configuration. 
+
+| Key | Value Data Type |
+| --- | --- |
+| USERNAME_STR | String |
+| PASSWORD_STR | String |
+| COURSES | Array |
+| SECTION_IDS | Array |
+| BROWSER | String |
+
+**NOTE**
+1. The number of elements inside the array `COURSES` and `SECTION_IDS` must be the same!
+2. `BROWSER` can only be 'CHROME' or 'PHANTOM'
 
 To run, type the following:   
 ```
