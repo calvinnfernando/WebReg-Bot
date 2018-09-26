@@ -1,11 +1,40 @@
 # WebReg Bot
 
-**Use at your own risk!**
+:fire: **Use at your own risk!** :fire:
 
-A bot to automate enrolling process in UCSD WebReg on TritonLink.
+A bot to automate enrolling process in UCSD WebReg on [TritonLink](https://act.ucsd.edu/webreg2).
 
-You need to have Selenium installed. To install, type the following on the terminal:    `pip install selenium`
+## Prerequisites
 
-Open webregBot.py and change the value of the variables on line 9-12 accordingly, then decide which browser that you want to use on line 14-15.
+| Dependencies  | Version       |
+| ------------- |---------------|
+| OS            | OSX           |
+| Python        | 2.7           |
 
-To run, type the following:   `./bgBash.sh [date: MM-DD-YYYY] [time: HH:MM]`
+## Installing
+
+You need to have Selenium installed. To install, type the following on the terminal:    
+```
+pip install selenium
+```
+
+## How to use
+
+Open `config.py` and fill up your configuration. 
+
+| Key | Value Data Type |
+| --- | --- |
+| USERNAME_STR | String |
+| PASSWORD_STR | String |
+| COURSES | Array |
+| SECTION_IDS | Array |
+| BROWSER | String |
+
+**NOTE**
+1. The number of elements inside the array `COURSES` and `SECTION_IDS` must be the same!
+2. `BROWSER` can only be 'CHROME' or 'PHANTOM'
+
+To run, type the following:   
+```
+./bgBash.sh [date: MM-DD-YYYY] [time: HH:MM]
+```
