@@ -32,7 +32,7 @@ Open `config.py` and fill up your configuration.
 
 **NOTE**
 1. The number of elements inside the array `COURSES` and `SECTION_IDS` must be the same!
-2. `BROWSER` can only be 'CHROME' or 'PHANTOM'
+2. `BROWSER` can only be 'DISPLAY_BROWSER' or 'NO_BROWSER'
 
 To run, type the following:   
 ```
