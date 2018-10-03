@@ -1,9 +1,11 @@
 import config
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import os
 
 # get user configuration
 USERNAME_STR = config.CONFIG['USERNAME_STR']
@@ -12,10 +14,14 @@ COURSES = config.CONFIG['COURSES']
 SECTION_IDS = config.CONFIG['SECTION_IDS']
 BROWSER = config.CONFIG['BROWSER']
 
-if BROWSER == 'CHROME':
+if BROWSER == 'DISPLAY_BROWSER':
 	browser = webdriver.Chrome('./driver/chromedriver')
-elif BROWSER == 'PHANTOM':
-	browser = webdriver.PhantomJS('./driver/phantomjs')
+elif BROWSER == 'NO_BROWSER':
+	chrome_options = Options()
+	chrome_options.add_argument("--headless")
+	chrome_options.add_argument("--window-size=1920x1080")
+	chrome_driver = os.getcwd() + "/../driver/chromedriver"
+	browser = webdriver.Chrome(chrome_options=chrome_options, executable_path=chrome_driver)
 else:
 	print 'Browser is not supported :('
 	'''
